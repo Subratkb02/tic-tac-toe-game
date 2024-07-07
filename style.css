@@ -1,40 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #5e548e;
     text-align: center;
-}  
-
-#hd{
-    margin:30px;
-    margin-top:30px;
-    color: #fff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.container{
-    margin-top:30px;
+
+#hd {
+    margin: 30px;
+    color: #fff;
+}
+
+.container {
+    margin-top: 30px;
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
-.game{
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap:1.5vh;
+    gap: 1.5vh;
 }
 
-.box{
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
@@ -43,34 +42,28 @@ body{
     font-size: 8vmin;
     color: #e0b1cb;
     background-color: #231942;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#reset-btn{
-    margin: 30px;
+#reset-btn, #new-btn {
+    margin: 20px;
     padding: 1rem;
     font-size: 1.25rem;
     background-color: #231942;
     border-radius: 1rem;
-    border:none;
-    color:#fff;
-}
-
-#new-btn{
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: #231942;
-    border-radius: 1rem;
-    border:none;
-    color:#fff;
-}
-
-#msg{
+    border: none;
     color: #fff;
-    font-size: 8vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
 }
 
-.msg-container{
+#msg {
+    color: #fff;
+    font-size: 5vh;
+}
+
+.msg-container {
     height: 100vmin;
     display: flex;
     justify-content: center;
@@ -79,11 +72,30 @@ body{
     gap: 2rem;
 }
 
-
-.hide{
+.hide {
     display: none;
 }
 
-.hide2{
-    display:inline;
+@media (max-width: 768px) {
+    .box {
+        height: 20vmin;
+        width: 20vmin;
+        font-size: 6vmin;
+    }
+
+    #msg {
+        font-size: 4vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        height: 25vmin;
+        width: 25vmin;
+        font-size: 5vmin;
+    }
+
+    #msg {
+        font-size: 3vh;
+    }
 }
